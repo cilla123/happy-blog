@@ -3,9 +3,12 @@
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
+
   async index() {
-    this.ctx.body = 'hi, egg';
+    await this.ctx.render('login/index.js');
+    await this.ctx.render('login/index.html', {});
   }
+
 }
 
 module.exports = HomeController;
